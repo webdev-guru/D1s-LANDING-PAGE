@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Course</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* General Reset */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #000;
+      background: #f3f4f6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #f3f4f6;
+      color: #07b110;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border-radius: 15px;
+      box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(255, 255, 255, 0.9);
+    }
+
+    /* Benefits Section */
+    .benefits {
+      background: #fff;
+      color: #000;
+      padding: 40px 20px;
+    }
+
+    .benefit-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .benefit-item {
+      flex: 1 1 calc(33.33% - 20px);
+      background: #f3f4f6;
+      color: #000;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .benefit-item h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    /* Dropdown button */
+    .dropdown-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: none;
+      border: none;
+      color: #000;
+      cursor: pointer;
+      font-size: 1em;
+      padding: 10px 0;
+    }
+
+    .dropdown-btn span {
+      margin-right: 10px; /* Space between "More Info" text and arrow */
+    }
+
+    .dropdown-btn i {
+      transition: transform 0.3s ease; /* Rotate animation */
+    }
+
+    .dropdown-btn.open i {
+      transform: rotate(90deg); /* Rotate arrow when open */
+    }
+
+    .dropdown-content {
+      display: none; /* Initially hidden */
+      margin-top: 10px;
+    }
+
+    /* Pricing Section */
+    #pricing {
+      background: #f3f4f6;
+      color: #000;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #pricing h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    #pricing p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    #pricing .cta-btn {
+      text-decoration: none;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer .social-links {
+      margin-top: 10px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ff0000;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .benefit-items {
+        flex-direction: column;
+      }
+
+      .benefit-item {
+        flex: 1 1 100%;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+    }
+        /* Custom styles for pricing */
+        .green-text {
+      color: #07b110;
+    }
+        
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>MASTER <br> WEB DEVELOPMENT <br> WITH PRACTICAL PROJECT GUIDES</h1>
+      <p> <strong>LEARN <br> HTML, CSS, & JAVASCRIPT WITH <br> STEP-BY-STEP ILLUSTRATIONS AND <br> 5 REAL-WORLD PROJECTS.</strong></p>
+      <a href="#pricing" class="cta-btn">Get Instant Access</a>
+    </div>
+  </header>
+
+  <!-- Course Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2>WHY CHOOSE THIS COURSE?</h2>
+      <div class="benefit-items">
+        <div class="benefit-item">
+          <h3>BEGINNER FRIENDLY</h3>
+          <p>STEP BY STEP INSTRUCTIONS DESIGNED FOR BEGINNERS.</p>
+          <button class="dropdown-btn">
+            <span><strong>More Info</strong></span>
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+          <div class="dropdown-content">
+            <p><strong>Includes:</strong> <br> • STRUCTURED LESSONS <br> • HANDS ON EXAMPLES <br> • GUIDED PRACTICE FOE NEWBIES </p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <h3>REAL-WORLD-PROJECTS</h3>
+          <p>5 PRACRICAL PROJECT TO ENHANCE YOUR SKILLS.</p>
+          <button class="dropdown-btn">
+            <span><strong>More Info</strong></span>
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+          <div class="dropdown-content">
+            <p><strong>Includes:</strong> <br> • ADMIN DASHBOARD  <br> • BLOG PLATFORM <br> • CARD MEMORY GAME <br> • E-COMMERCE WEBSITE <br> • PORT-FOLIO WEBSITE</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <h3>COMPREHENSIVE PDFs</h3>
+          <p>ILLUSTRATIONS MAKE  CODING INTUITIVE AND EASY TO FOLLOW.</p>
+          <button class="dropdown-btn">
+            <span><strong>More Info</strong></span>
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+          <div class="dropdown-content">
+            <p><strong>Includes:</strong> <br> • HTML <br> • CSS <br> • JAVASCRIPT </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+  /* Course Benefits Section */
+.benefits {
+  background: #fff;
+  color: #000;
+  padding: 40px 20px;
+}
+
+.benefits h2 {
+  text-align: center; /* Center align the title */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.benefit-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.benefit-item {
+  flex: 1 1 calc(33.33% - 20px);
+  background: #f3f4f6;
+  color: #000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.7);
+}
+  </style>
+  
+<!-- Testimonial Section -->
+<section class="testimonials">
+  <div class="container">
+    <h2>WHAT OUR STUDENTS SAY</h2>
+    <p><strong>Discover how our course has positively impacted lives. Click to watch their stories.</strong></p>
+    <div class="testimonial-videos">
+      <!-- Video 1 -->
+      <div class="video-item">
+        <a href="" target="_blank">
+          <img src="images/blog6.jpg" alt="Testimonial Video 1">
+          <p>"D1's tech lectures is a game changer. His clear explanations and practical examples made 
+            complex topics easy to understand. I now feel confident applying what 
+            I’ve learned in real-world projects!"</p>
+        </a>
+      </div>
+      <!-- Video 2 -->
+      <div class="video-item">
+        <a href="" target="_blank">
+          <img src="images/blog5.jpg" alt="Testimonial Video 2">
+          <p>"The course exceeded my expectations. D1 breaks down tough concepts into digestible pieces,
+            and the hands-on approach ensured I could implement the skills immediately. Highly recommended!"</p>
+        </a>
+      </div>
+         <!-- Video 3 -->
+         <div class="video-item">
+          <a href="" target="_blank">
+            <img src="images/blog1.jpg" alt="Testimonial Video 1">
+            <p>"I’ve taken several tech courses, but D1's lectures stand out for their depth and clarity. 
+              The content is well-organized, and his teaching style makes learning enjoyable and effective!"</p>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Testimonials Section */
+  .testimonials {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #000;
+  }
+
+  .testimonials p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .testimonial-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .video-item {
+    width: 300px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .video-item img {
+    width: 100%;
+    display: block;
+  }
+
+  .video-item p {
+    padding: 10px;
+    font-size: 1em;
+    color: #000;
+    background: #fff;
+  }
+
+  .video-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-videos {
+      flex-direction: column;
+    }
+
+    .video-item {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+</style>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="container">
+      <h2>GET STARTED NOW</h2>
+      <p><strong>JUST FOR 3000 NAIRA ONLY <br> FOR FIRST 500 PEOPLE <br> <p style="color: #d30606;">FILES WOULD BE AVAILABLE FROM 1ST JANUARY 2025 - 31ST MARCH 2025</p></strong></p>
+      <a href="https://d1s-credit-me.vercel.app/" target="_blank" class="cta-btn"><strong>Buy Now</strong></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <p>© 2024 𝔻𝟙'𝕤 𝕋𝔼ℂℍ 🕷💻 Web Dev Course. <br> All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.tiktok.com/@webdev_guru?_t=8sQtjuYiz2L&_r=1" target="_blank"><i class="ri-tiktok-line"></i></a>
+        <a href="https://www.instagram.com/webdev.guru?igsh=Yjhjd3VoOGRqNDNy" target="_blank"><i class="ri-instagram-line"></i></a>
+        <a href="https://wa.me/2348066203414" target="_blank"><i class="ri-whatsapp-line"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ensure dropdown content is hidden by default
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+      dropdown.style.display = 'none';
+    });
+
+    // Toggle dropdown content visibility
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const dropdown = button.nextElementSibling;
+
+        // Toggle display and rotate arrow
+        if (dropdown.style.display === 'block') {
+          dropdown.style.display = 'none';
+          button.classList.remove('open');
+        } else {
+          dropdown.style.display = 'block';
+          button.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
